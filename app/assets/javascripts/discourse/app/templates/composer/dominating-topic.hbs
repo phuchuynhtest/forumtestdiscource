@@ -1,0 +1,7 @@
+<a href {{action this.closeMessage this.message}} class="close">{{d-icon "times"}}</a>
+
+{{html-safe this.message.body}}
+
+{{#if this.currentUser.can_invite_to_forum}}
+  <DButton @class="btn-primary" @label="footer_nav.share" @icon="link" @action={{action this.shareModal}} />
+{{/if}}
